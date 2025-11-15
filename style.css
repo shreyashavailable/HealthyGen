@@ -1,0 +1,579 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+:root{
+  --color-light-blue: #1cb6d8;
+  --color-light-green: #67BA3C;
+
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 5px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.hero-section{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.video-div{
+  height: 100vh;
+  width: 100vw;
+}
+
+.video-div video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+header{
+  height: 8vh;
+  width: 100%;
+  /* background-color: red; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+nav{
+  /* background-color: green; */
+  height: 100%;
+  padding: 0 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav>a{
+  font-size: 4.5vh;
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  color: white;
+}
+
+nav .navigation{
+  display: flex;
+  align-items: center;
+  gap: 5vh;
+}
+
+nav .navigation a{
+  font-size: 17px;
+  position: relative;
+  color: white;
+}
+
+nav .navigation a::before{
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: width 0.3s ease;
+}
+
+nav .navigation a:hover::before {
+  width: 100%;
+}
+
+.main-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -73%);
+  z-index: 5;
+  text-align: center;
+  color: white;
+}
+
+.main-text h1 span{
+  font-size: 17vh;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  display: inline-block;
+}
+
+.main-text h3{
+  padding-top: 5vh;
+}
+
+.main-text h3 span{
+  font-size: 4.5vh;
+  font-family: inter;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.story{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+
+}
+
+.story .storyimage{
+  height: 0vh;
+  width: 35vw;
+  position: absolute;
+  top: 18%;
+  left: 4%; 
+  overflow: hidden;
+}
+
+.story .storyimage img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.story .storyimage img:hover{
+  scale: 1.03;
+}
+
+.story-head {
+  height: 6.5vh;
+  width: 60vw;
+  /* background-color: red; */
+  margin-top: 5vh;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-head h1{
+  font-size: 6.5vh;
+  font-family: "Merriweather", serif;
+  line-height: 6vh;
+  transform: translateY(-110%);
+  color: var(--color-light-blue);
+}
+
+.story-head h1::before{
+  content: "01.";
+  position: absolute;
+  right: 15.5vw;
+  top: 0.1px;
+  font-family: silk serif;
+}
+
+.story .underline{
+  height: 2px;
+  background-color: var(--color-light-blue);
+  width: 0vw;
+  position: absolute;
+  top: 13%;
+  right: 5%;
+}
+
+.story-paragraph{
+  height: 84vh;
+  width: 48vw;
+  /* background-color: red; */
+  position: absolute;
+  right: 6%;
+  top: 15%;
+  overflow: hidden;
+
+}
+
+.para-wrapper {
+  overflow: hidden;
+  position: relative;
+  /* background-color: green; */
+  width: 50%;
+  margin-top: 2vh;
+}
+
+.masked-para {
+  font-size: 2.5vh;
+  line-height: 1.4;
+  color: var(--color-light-green);
+  font-weight: 400;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.para-wrapper:nth-child(2){
+  /* background-color: blue; */
+  margin-top: 2vh;
+}
+
+.para-wrapper:nth-child(3){
+  /* background-color: rgb(147, 147, 238); */
+  right: 0px;
+  top: 33%;
+  position: absolute;
+}
+
+.para-wrapper:nth-child(4){
+  /* background-color: rgb(104, 104, 230); */
+  right: 0px;
+  bottom: 0;
+  position: absolute;
+}
+
+.vision{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.vision-head {
+  height: 6.5vh;
+  width: 60vw;
+  /* background-color: red; */
+  margin-top: 13vh;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+.vision-head h1{
+  font-size: 6.2vh;
+  font-family: "Merriweather", serif;
+  line-height: 6vh;
+  transform: translateY(-110%);
+  color: var(--color-light-blue);
+}
+
+.vision-head h1::before{
+  content: "02.";
+  position: absolute;
+  right: 17vw;
+  top: 0.1px;
+  font-family: silk serif;
+}
+
+.vision .underline{
+  height: 2px;
+  background-color: var(--color-light-blue);
+  width: 0vw;
+  position: absolute;
+  top: 7%;
+  right: 7%;
+}
+
+.vision-para{
+  /* background-color: red; */
+  width: 50%;
+  position: relative;
+  top: 14%;
+  left: 5%;
+}
+
+.vision-line {
+  font-size: 2.8vh;
+  line-height: 1.4;
+  color: var(--color-light-green);
+  font-weight: 400;
+  margin-top: 1.2vh;
+  overflow: hidden;
+  transform: translateY(12px);
+  opacity: 0;
+  /* fallback in case clip-path isn't fully supported */
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+
+.vision-line.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.vision-image{
+  height: 0vh;
+  width: 40vw;
+  position: absolute;
+  right: 4%;
+  top: 22%;
+}
+
+.vision-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.banner{
+  height: 100vh;
+  width: 100vw;
+  /* background: #2A7B9B; */
+  /* background: linear-gradient(90deg,rgba(42, 123, 155, 1) 12%, rgba(123, 204, 94, 1) 100%); */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.left{
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  left: 0;
+}
+
+.left img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.right{
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  right: 0;
+}
+
+.right img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tendev{
+  height: 58vh;
+  width: 100%;
+  background-color: red;
+  margin: 25vh 0;
+}
+
+.tendev img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-us{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.about-head {
+  height: 6.5vh;
+  width: 60vw;
+  margin-top: 13vh;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-head h1{
+  font-size: 6.2vh;
+  font-family: "Merriweather", serif;
+  line-height: 6vh;
+  transform: translateY(-110%);
+  color: var(--color-light-blue);
+}
+
+.about-head h1::before{
+  content: "03.";
+  position: absolute;
+  right: 15.5vw;
+  top: 0.1px;
+  font-family: silk serif;
+}
+
+.about-us .underline{
+  height: 2px;
+  background-color: var(--color-light-blue);
+  width: 0vw;
+  position: absolute;
+  top: 7%;
+  right: 5.5%;
+}
+
+.about-text {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 3%;
+  padding: 0 5vw; 
+}
+
+.about-us h2 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 3.5vh; 
+  color: var(--color-light-green); 
+  line-height: 1.5; 
+  font-weight: 500;
+}
+
+.about-us h2 span {
+  display: inline-block;
+  transform: translateY(-110%);
+  opacity: 0;
+}
+
+.aboutdiv{
+  height: 70vh;
+  width: 100vw;
+  margin-top: 5vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  height: 55vh;
+  width: 85vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .img-con{
+  height: 100%;
+  width: 20vw;
+  border-radius: 10px;
+}
+
+.content .img-con .img{
+  height: 64%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content .img-con .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+  transition: all 0.7s ease;
+}
+
+.content .img-con .img img:hover{
+  scale: 1.06;
+}
+
+.content .img-con .text h3{
+  padding: 10px 5px;
+}
+
+.content .img-con .text p{
+  padding: 0px 5px;
+}
+
+.footer{
+  height: 40vh;
+  width: 100vw;
+  position: relative;
+}
+
+.footer-head {
+  height: 6.5vh;
+  width: 60vw;
+  margin-top: 13vh;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-head h1{
+  font-size: 6.2vh;
+  font-family: "Merriweather", serif;
+  line-height: 6vh;
+  transform: translateY(-110%);
+  color: var(--color-light-blue);
+}
+
+.footer-head h1::before{
+  content: "03.";
+  position: absolute;
+  right: 21.5vw;
+  top: 0.1px;
+  font-family: silk serif;
+}
+
+.footer .underline{
+  height: 2px;
+  background-color: var(--color-light-blue);
+  width: 0vw;
+  position: absolute;
+  top: 16.6%;
+  right: 5.5%;
+}
+
+.footer a{
+  position: absolute;
+  font-size: 25px;
+  color: var(--color-light-green);
+  top: 25%;
+  left: 33.5%;
+  border-bottom: 2px solid var(--color-light-green);
+}
+
+.footer a:nth-child(4){
+  position: absolute;
+  left: 65%;
+  /* background-color: red; */
+}
+
+.footer a:nth-child(5){
+  position: absolute;
+  left: 82%;
+  border-bottom: none;
+}
+
+.footer a:nth-child(6){
+  position: absolute;
+  left: 85%;
+  border-bottom: none;
+}
+
+.footer a:nth-child(7){
+  position: absolute;
+  left: 88%;
+  border-bottom: none;
+}
+
+.footer a:nth-child(8){
+  position: absolute;
+  left: 91%;
+  border-bottom: none;
+}
+
+.footer>h5{
+  position: absolute;
+  top: 56%;
+  left: 33%;
+  font-size: 21px;
+  width: 100%;
+}
+
+.footer>p{
+  position: absolute;
+  top: 66%;
+  left: 33%;
+  font-size: 21px;
+  width: 66%;
+}
